@@ -1,8 +1,10 @@
 ✈ Airline Delay Root-Cause Analysis
+
 This project analyzes large-scale U.S. airline operational data to identify and understand the key factors contributing to flight delays.
 Rather than focusing solely on prediction, the project emphasizes root-cause analysis, airport behavior patterns, and operational insights using machine learning techniques.
 
 📌 Project Objectives
+
 Examine operational, weather, and system-level contributors to flight delays
 Predict arrival delay magnitude using regression modeling
 Classify flights as delayed or non-delayed based on operational thresholds
@@ -10,6 +12,7 @@ Identify airport-level behavioral patterns using clustering
 Apply dimensionality reduction (PCA) to analyze correlated delay components
 
 📊 Dataset
+
 Source: U.S. Department of Transportation (via Kaggle)
 Dataset: Commercial Airline Flight Records
 Size: Large-scale operational dataset (>500MB)
@@ -19,6 +22,7 @@ https://www.kaggle.com/datasets/usdot/flight-delays
 After downloading, place flights.csv in the project root directory before running the notebook.
 
 🧠 Methodology
+
 1️⃣ Data Preprocessing
 Removed cancelled and incomplete records
 Handled missing values in delay components
