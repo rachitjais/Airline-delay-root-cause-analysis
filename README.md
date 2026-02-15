@@ -31,6 +31,7 @@ https://www.kaggle.com/datasets/usdot/flight-delays
 After downloading, place flights.csv in the project root directory before running the notebook.
 
 🧠 Methodology
+
 1️⃣ Data Preprocessing
 
 Removed cancelled and incomplete records
