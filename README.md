@@ -1,62 +1,65 @@
-# Airline Delay Root-Cause Analysis
+✈ Airline Delay Root-Cause Analysis
+This project analyzes large-scale U.S. airline operational data to identify and understand the key factors contributing to flight delays.
+Rather than focusing solely on prediction, the project emphasizes root-cause analysis, airport behavior patterns, and operational insights using machine learning techniques.
 
-This project analyzes real-world airline operations data to identify key factors contributing to flight delays.  
-Instead of focusing only on prediction, the project emphasizes understanding delay causes and airport-level behavior patterns using machine learning and data analysis techniques.
+📌 Project Objectives
+Examine operational, weather, and system-level contributors to flight delays
+Predict arrival delay magnitude using regression modeling
+Classify flights as delayed or non-delayed based on operational thresholds
+Identify airport-level behavioral patterns using clustering
+Apply dimensionality reduction (PCA) to analyze correlated delay components
 
----
+📊 Dataset
+Source: U.S. Department of Transportation (via Kaggle)
+Dataset: Commercial Airline Flight Records
+Size: Large-scale operational dataset (>500MB)
+⚠ Due to file size limitations, the dataset is not included in this repository.
+You can download it from:
+https://www.kaggle.com/datasets/usdot/flight-delays
+After downloading, place flights.csv in the project root directory before running the notebook.
 
-## Objectives
-- Analyze operational, weather, and system-related contributors to flight delays  
-- Predict arrival delay magnitude and identify high-risk delayed flights  
-- Discover airport-level delay patterns using unsupervised learning  
+🧠 Methodology
+1️⃣ Data Preprocessing
+Removed cancelled and incomplete records
+Handled missing values in delay components
+Engineered classification target (IS_DELAYED)
 
----
+2️⃣ Exploratory Data Analysis
+Visualized delay contribution by cause
+Analyzed delay trends across days of the week
 
-## Dataset
-- Source: U.S. Department of Transportation (via Kaggle)
-- Records: Commercial airline flights
-- Key Features:
-  - Arrival Delay
-  - Airline Delay
-  - Weather Delay
-  - Air System Delay
-  - Late Aircraft Delay
-  - Month, Day of Week, Origin Airport
+3️⃣ Supervised Learning
+Linear Regression to estimate arrival delay magnitude
+Logistic Regression & Decision Tree to classify delayed flights
+Evaluated using MAE, RMSE, R², Accuracy, F1 Score, and Confusion Matrix
 
----
+4️⃣ Unsupervised Learning
+K-Means Clustering to group airports based on delay behavior
+Cluster-level analysis for operational pattern discovery
 
-## Methodology
-- Data Cleaning and Preprocessing using Pandas
-- Exploratory Data Analysis (EDA) for trend identification
-- Regression modeling to estimate arrival delay duration
-- Classification modeling to identify delayed vs non-delayed flights
-- K-Means clustering to group airports by delay behavior
-- Principal Component Analysis (PCA) to reduce correlated delay features
+5️⃣ Dimensionality Reduction
+Principal Component Analysis (PCA) to reduce correlated delay features and improve interpretability
 
----
+🛠 Tools & Technologies
+Python
+Pandas, NumPy
+Scikit-learn
+Matplotlib, Seaborn
+Jupyter Notebook
 
-## Tools & Technologies
-- Python
-- Pandas, NumPy
-- Scikit-learn
-- Matplotlib
-- Jupyter Notebook
+🔍 Key Insights
+Airline and air system delays are dominant contributors to overall arrival delay
+Weather delays influence delay severity but vary by airport
+Airports exhibit distinct behavioral clusters based on delay characteristics
+PCA confirms strong correlation among operational delay factors
 
----
+▶ How to Run
+Clone the repository
+Install dependencies:
+pip install -r requirements.txt
+Download the dataset and place flights.csv in the root directory
+Open and run Airline_Delay_Analysis.ipynb
 
-## Key Insights
-- Operational delays contribute more to delay frequency, while weather delays impact severity  
-- Airports exhibit distinct delay behavior patterns that can be grouped using clustering  
-- PCA reveals that a small number of components explain most operational delay variance  
-
----
-
-## How to Run
-1. Clone the repository  
-2. Install dependencies from `requirements.txt`  
-3. Open and run the notebook in the `notebooks/` folder  
-
----
-
-## Author
+👤 Author
 Rachit Jaiswal
+B.Tech – Computer Science Engineering
